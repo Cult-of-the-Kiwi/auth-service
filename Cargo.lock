@@ -3361,7 +3361,6 @@ checksum = "5d99f8c9a7727884afe522e9bd5edbfc91a3312b36a77b5fb8926e4c31a41801"
 [[package]]
 name = "topic_structs"
 version = "0.1.0"
-source = "git+https://github.com/Cult-of-the-Kiwi/topic_structs#3fb6c7d490b55eb5e344130223ab10c4f78c0ba4"
 dependencies = [
  "serde",
 ]
