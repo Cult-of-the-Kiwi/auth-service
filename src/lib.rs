@@ -1,6 +1,7 @@
 pub mod api_utils;
 pub mod app;
 pub mod db;
+pub mod health;
 pub mod jwt;
 pub mod log_out;
 pub mod models;

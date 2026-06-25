@@ -1,4 +1,5 @@
 use crate::db::init::init;
+use crate::health::health;
 use crate::log_out::log_user_out;
 use crate::models::app_state::AppState;
 use crate::register::register_user;
@@ -6,6 +7,7 @@ use crate::sign_in::sign_in_user;
 
 use anyhow::Result;
 use axum::http::{HeaderValue, Method, header};
+use axum::routing::get;
 use axum::{Router, routing::post};
 use dotenvy::dotenv;
 use fluvio::FluvioConfig;
@@ -133,6 +135,7 @@ pub async fn run() -> Result<()> {
         .route("/register", post(register_user))
         .route("/login", post(sign_in_user))
         .route("/logout", post(log_user_out))
+        .route("/health", get(health))
         .layer(cors_layer)
         .layer(trace_layer)
         .with_state(state);

@@ -8,7 +8,7 @@ use crate::api_utils::responses::INTERNAL_SERVER_ERROR;
 use crate::db::operations::verify_user_credentials;
 use crate::jwt::generate_jwt;
 use crate::models::app_state::AppState;
-use topic_structs::UserLoggedIn;
+use devcord_events::events::auth::UserLoggedIn;
 use tracing::error;
 
 #[derive(Serialize)]

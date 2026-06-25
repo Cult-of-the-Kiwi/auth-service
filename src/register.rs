@@ -7,9 +7,9 @@ use crate::models::app_state::AppState;
 
 use axum::extract::State;
 use axum::{Json, response::IntoResponse};
+use devcord_events::events::auth::UserCreated;
 use serde::{Deserialize, Serialize};
 use serde_json::to_vec;
-use topic_structs::UserCreated;
 use tracing::error;
 
 #[derive(Serialize)]
